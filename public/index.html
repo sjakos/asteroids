@@ -13,21 +13,21 @@
 
 <body>
     <header>
-        Asteroid finder
+        <h1>Asteroid finder</h1>
     </header>
 
     <div class="container">
         <div class="row">
-            <form action=" ">
+            <form id="asteroid_search" action="">
                 <div class="form-group row">
-                    <label class="col-sm-3 col-form-label" for="startDate">Start Date</label>
-                    <input type="date" name="startDate" id="startDate" class="form-control col-sm-9" placeholder="" aria-describedby="helpStartDate">
-                    <small id="helpStartDate" class="text-muted form-text offset-sm-3">Choose a date to start the search</small>
+                    <label class="col-sm-3 col-form-label" for="start_date">Start Date</label>
+                    <input type="date" name="start_date" id="start_date" class="form-control col-sm-9" placeholder="" aria-describedby="help_start_date">
+                    <small id="help_start_date" class="text-muted form-text offset-sm-3">Choose a date to start the search</small>
                 </div>
                 <div class="form-group row">
-                    <label class="col-sm-3 col-form-label" for="endDate">End Date</label>
-                    <input type="date" name="endDate" id="endDate" class="form-control col-sm-9" placeholder="" aria-describedby="helpEndDate">
-                    <small id="helpEndDate" class="text-muted form-text offset-sm-3">Choose a date to end the search</small>
+                    <label class="col-sm-3 col-form-label" for="end_date">End Date</label>
+                    <input type="date" name="end_date" id="end_date" class="form-control col-sm-9" placeholder="" aria-describedby="help_end_date">
+                    <small id="help_end_date" class="text-muted form-text offset-sm-3">Choose a date to end the search</small>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="searchFilter">I'd like to see...</label>
@@ -44,8 +44,8 @@
     </div>
 
     <footer>
-        <p>All asteroid data is from the NASA JPL Asteroid team (<a href="http://neo.jpl.nasa.gov/">http://neo.jpl.nasa.gov/</a>)</p>
-        <p>Web page designed by Sam Jakos</p>
+        <p>All asteroid data is from the NASA JPL Asteroid team (<a href="http://neo.jpl.nasa.gov/">http://neo.jpl.nasa.gov/</a>)
+        <br>Web page designed by Sam Jakos</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
