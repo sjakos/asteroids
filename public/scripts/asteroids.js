@@ -59,15 +59,15 @@ function query_NEODB() {
  */
 function filter_search(filter, data) {
     switch (filter) {
-        case biggest:
+        case "biggest":
             biggest_asteroid(data);
             break;
 
-        case fastest:
+        case "fastest":
             fastest_asteroid(data);
             break;
 
-        case closest:
+        case "closest":
             closest_asteroid(data);
             break;
 
