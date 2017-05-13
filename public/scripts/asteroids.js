@@ -7,6 +7,10 @@ $( document ).ready( function() {
  */
 function initialize() {
     set_value_to_today("start_date");
+    set_value_to_today("end_date");
+    $("submit").click(function() {
+        search_NEODB();
+    });
 };
 
 /**
@@ -19,3 +23,16 @@ function set_value_to_today( elementID ) {
     today = today.toISOString().slice(0,10);
     $("#" + elementID).val(today);
 };
+
+function search_NEODB() {
+    var start_date = $("#start_date").val();
+    var end_date = $("#end_date").val();
+    $.ajax({
+        method: "GET",
+        url: "https://api.nasa.gov/neo/rest/v1/feed",
+        data: { 
+            start_date: start_date, 
+            end_date: end_date,
+            api_key:"DEMO_KEY"}
+    });
+}
