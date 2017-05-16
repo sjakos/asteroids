@@ -29,10 +29,9 @@ function set_value_to_today(elementID) {
  */
 function search_asteroids() {
     var query = query_NEODB();
-    var filter = $("#search_filter").val();
 
     query.done(function (data) {
-        filter_search(filter, data)
+        display_asteroid_table(data);
     });
 }
 
@@ -50,29 +49,3 @@ function query_NEODB() {
         api_key: "DEMO_KEY"
     });
 };
-
-/**
- * Send query data to appropriate function for display
- * 
- * @param {string}  filter  - Filter from search form
- * @param {Object}  data    - Data from API query
- */
-function filter_search(filter, data) {
-    switch (filter) {
-        case "biggest":
-            biggest_asteroid(data);
-            break;
-
-        case "fastest":
-            fastest_asteroid(data);
-            break;
-
-        case "closest":
-            closest_asteroid(data);
-            break;
-
-        default:
-            all_asteroids(data);
-            break;
-    }
-}
