@@ -8,7 +8,7 @@ $(document).ready(function () {
 function initialize() {
     set_value_to_today("start_date");
     set_value_to_today("end_date");
-    $("#search_form").submit(function () {
+    $("#submit").click(function () {
         query_NEODB();
     });
 }
@@ -41,6 +41,7 @@ function query_NEODB() {
         function (search_data) {
             create_asteroid_table(search_data);
         });
+        //add in a fail catch
 }
 
 //Refactor point: Methods to prevent blocks of HTML in my JS?
